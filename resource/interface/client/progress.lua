@@ -167,10 +167,11 @@ function lib.progressBar(data)
 
     if not interruptProgress(data) then
         SendNUIMessage({
-            action = 'progress',
+            action = 'circleProgress',
             data = {
                 label = data.label,
-                duration = data.duration
+                duration = data.duration,
+                position = 'bottom'
             }
         })
 
